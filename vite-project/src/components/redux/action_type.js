@@ -1,4 +1,4 @@
-import { ADD_Todo, EDIT_Todo, DELETE_Todo, TOGGLE_Todo } from "./action";
+import { ADD_Todo, EDIT_Todo, DELETE_Todo } from "./action";
 
 const addTodo = (payload) => {
   return {
@@ -6,10 +6,10 @@ const addTodo = (payload) => {
     payload,
   };
 };
-const editTodo = ({ id, existTodo }) => {
+const editTodo = ({ id, title ,content }) => {
   return {
     type: EDIT_Todo,
-    payload: { id, existTodo },
+    payload: { id, title ,content },
   };
 };
 const deleteTodo = (id) => {
@@ -18,10 +18,5 @@ const deleteTodo = (id) => {
     payload: id,
   };
 };
-const toggleTodo = (id) => {
-  return {
-    type: TOGGLE_Todo,
-    payload: id,
-  };
-};
-export { addTodo, editTodo, deleteTodo, toggleTodo };
+
+export { addTodo, editTodo, deleteTodo };
