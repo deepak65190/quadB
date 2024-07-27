@@ -160,6 +160,7 @@ const List = () => {
                 ref={initialRef}
                 placeholder="Title"
                 value={title}
+                required
                 onChange={(e) => setTitle(e.target.value)}
               />
             </FormControl>
@@ -167,6 +168,7 @@ const List = () => {
               <Textarea
                 placeholder="Content"
                 value={content}
+                required
                 onChange={(e) => setContent(e.target.value)}
               />
             </FormControl>
